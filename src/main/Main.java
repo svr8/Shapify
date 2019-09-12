@@ -8,6 +8,7 @@ import java.io.OutputStream;
 
 import javax.imageio.ImageIO;
 
+import main.imageprocessing.Tool;
 import main.shape.ImageShaper;
 
 public class Main {
@@ -37,6 +38,32 @@ public class Main {
 		OutputStream shapeStream = new FileOutputStream("images/shapified.jpeg");
 		ImageIO.write(shapfiedImage, "jpeg", shapeStream);
 		shapeStream.close();
+		
+		/*
+		
+		BufferedImage eq = Tool.equalizeHistogram(sourceImage);
+		OutputStream eqStream = new FileOutputStream("images/eq.jpeg");
+		ImageIO.write(eq, "jpeg", eqStream);
+		eqStream.close();
+		
+		shaper = new ImageShaper(eq);
+		color = new int[] {15078163, 3775186, 2999361 };
+		cIndex = 0;
+		
+		shapeCount = shaper.getShapeCount();
+		System.out.println("> "+shapeCount+" shapes found");
+		
+		shapeInfo = new int[shapeCount][2];
+		for(int i=0;i<shapeCount;i++) {
+			shapeInfo[i]= new int[] {color[cIndex], i};
+			cIndex = (cIndex+1)%3;
+		}
+		
+		shapfiedImage = shaper.getShapeTrace(shapeInfo);
+		
+		shapeStream = new FileOutputStream("images/shapified2.jpeg");
+		ImageIO.write(shapfiedImage, "jpeg", shapeStream);
+		shapeStream.close(); */
 	}
 
 }
