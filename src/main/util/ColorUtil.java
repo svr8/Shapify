@@ -11,7 +11,7 @@ public class ColorUtil {
             d += Math.pow(c1[i]-c2[i], 2);
         d = Math.sqrt(d);
 
-        return d <= 80;
+        return d <= 100;
     }
 	
 	public static int wrapColor(int[] a) {

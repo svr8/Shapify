@@ -27,15 +27,16 @@ public class Main {
 		int shapeCount = shaper.getShapeCount();
 		System.out.println("> "+shapeCount+" shapes found");
 		
+		shapeCount = 1000;
 		int[][] shapeInfo = new int[shapeCount][2];
-		for(int i=0;i<shapeCount;i++) {
+		for(int i=40;i<shapeCount;i++) {
 			shapeInfo[i]= new int[] {color[cIndex], i};
 			cIndex = (cIndex+1)%3;
 		}
 		
 		BufferedImage shapfiedImage = shaper.getShapeTrace(shapeInfo);
 		
-		OutputStream shapeStream = new FileOutputStream("images/shapified.jpeg");
+		OutputStream shapeStream = new FileOutputStream("images/shapified2.jpeg");
 		ImageIO.write(shapfiedImage, "jpeg", shapeStream);
 		shapeStream.close();
 		
