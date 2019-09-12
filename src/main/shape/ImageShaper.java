@@ -43,6 +43,25 @@ public class ImageShaper {
 		return shapeList.get(index);
 	}
 	
+	public BufferedImage getShapeTrace(int...indexList) {
+		BufferedImage res = new BufferedImage(rootWidth, rootHeight, BufferedImage.TYPE_INT_BGR);
+		for(int i=0;i<rootWidth;i++) {
+			for(int j=0;j<rootHeight;j++)
+				res.setRGB(i, j, 16777215);
+		}
+		
+		for(int index : indexList) {
+			Shape shape = getShape(index);
+			Iterator<MatrixCoordinate> iterator = shape.iterator();
+			while(iterator.hasNext()) {
+				MatrixCoordinate coordinate = iterator.next();
+				res.setRGB(coordinate.col, coordinate.row, 3775186);
+			}
+		}
+		
+		return res;
+	}
+	
 	public BufferedImage getShapeTrace(int[]... indexList) {
 		BufferedImage res = new BufferedImage(rootWidth, rootHeight, BufferedImage.TYPE_INT_BGR);
 		for(int i=0;i<rootWidth;i++) {
