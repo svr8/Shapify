@@ -4,8 +4,11 @@ The library does not aims to offer tools for novice developers so the artists ca
 
 # Examples
 
+## Original
+<img src="https://github.com/svr8/Shapify/blob/master/images/image.jpeg" alt="drawing" width="400" height="400"/>
 
-<img src="https://github.com/svr8/Shapify/blob/master/images/image.jpeg" alt="drawing" width="400" height="400"/> <img src="https://github.com/svr8/Shapify/blob/master/images/shapified.jpeg" alt="drawing" width="400" height="400"/>
+## Shapifed
+<img src="https://github.com/svr8/Shapify/blob/master/images/shapified2.jpeg" alt="drawing" width="400" height="400"/><img src="https://github.com/svr8/Shapify/blob/master/images/shapified.jpeg" alt="drawing" width="400" height="400"/>
 
 Here, every shape identified is given a unique number(index). 
 A particular shape can be fetched by using:
